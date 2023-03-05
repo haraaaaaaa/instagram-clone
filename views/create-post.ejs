@@ -1,9 +1,28 @@
 <%- include("includes/head.ejs") %>
+<link rel="stylesheet" href="css/home.css">
 <link rel="stylesheet" href="css/create-post.css">
 <script src="/javascript/create-post.js" defer></script>
   </head>
   <body>
-
+    
+    <form class="form">
+      <div class="row row-1"> 
+        <h1>Create</h1>
+        <button class="btn-share">Share</button>
+      </div>
+      
+      <div class="row row-2">
+        <label for="text">Title</label>
+        <input type="text" >
+        
+        <label for="url">Picture Url</label>
+        <input type="url" >
+        
+        <label for="text">Write a Caption</label>
+        <input type="text" >
+      </div>  
+    </form>
+    
     <%- include("includes/navbar.ejs") %>
   </body>
 </html>
