@@ -12,4 +12,8 @@ app.get("/", (request, response) => {
   response.render("index", { pageTitle: "Home" });
 });
 
+app.get("/post", (request, response) => {
+  response.render("index", { pageTitle: "Post" });
+});
+
 app.listen(5000);
