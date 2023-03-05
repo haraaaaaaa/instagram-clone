@@ -6,4 +6,4 @@ const gotoHomePage = async (event) => {
   window.location.replace("/");
 };
 
-createPost.addEventListener("click", gotoHomePage);
+homePage.addEventListener("click", gotoHomePage);
