@@ -1,18 +1,24 @@
+// requirements
 const express = require("express");
 const path = require("path");
 const fs = require("fs");
+const createHttpError = require("http-errors");
 
-const postsData = path.join(__dirname, "data", "posts.json");
-
+// express setup
 const app = express();
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static("public"));
 
+// ejs setup
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
+//variables
+const postsDataPath = path.join(__dirname, "data", "posts.json");
+
+// route handling
 app.get("/", (request, response) => {
-  fs.readFile(postsData, (err, posts) => {
+  fs.readFile(postsDataPath, (err, posts) => {
     response.render("home", {
       pageTitle: "Home",
       posts: JSON.parse(posts),
@@ -26,9 +32,14 @@ app.get("/post", (request, response) => {
 
 app.post("/post", (request, response) => {
   const { title, imgUrl, caption } = request.body;
-  fs.readFile(postsData, (err, posts) => {
+
+  if (caption.length > 300) {
+    return response.render("error400");
+  }
+
+  fs.readFile(postsDataPath, (err, posts) => {
     const newPosts = [{ title, imgUrl, caption }, ...JSON.parse(posts)];
-    fs.writeFile(postsData, JSON.stringify(newPosts), () => {
+    fs.writeFile(postsDataPath, JSON.stringify(newPosts), () => {
       response.redirect("/");
     });
   });
