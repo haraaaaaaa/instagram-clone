@@ -8,6 +8,7 @@ const createHttpError = require("http-errors");
 const app = express();
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static("public"));
+app.listen(5000);
 
 // ejs setup
 app.set("view engine", "ejs");
@@ -32,8 +33,9 @@ app.get("/post", (request, response) => {
 
 app.post("/post", (request, response) => {
   const { title, imgUrl, caption } = request.body;
+  console.log(title, imgUrl, caption);
 
-  if (caption.length > 300) {
+  if (caption.length > 3) {
     return response.render("error400");
   }
 
@@ -44,5 +46,3 @@ app.post("/post", (request, response) => {
     });
   });
 });
-
-app.listen(5000);

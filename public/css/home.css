@@ -72,18 +72,6 @@ li{
     background-position: bottom;
 }
 
-.post-img-1{
-    background-image: url("https://images.pexels.com/photos/3823187/pexels-photo-3823187.jpeg?auto=compress&cs=tinysrgb&w=1600");
-}
-
-.post-img-2{
-    background-image: url("https://images.pexels.com/photos/38136/pexels-photo-38136.jpeg?auto=compress&cs=tinysrgb&w=1600");
-}
-
-.post-img-3{
-    background-image: url("https://images.pexels.com/photos/8532484/pexels-photo-8532484.jpeg?auto=compress&cs=tinysrgb&w=1600");
-}
-
 .post-options {
     display: flex;
     align-items: center;
