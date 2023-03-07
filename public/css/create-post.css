@@ -5,11 +5,6 @@
     box-sizing: border-box;
 }
 
-.form{
-    height: 100vh;
-    background-color: bisque;
-}
-
 .row{
     padding: 2rem;
 }
@@ -29,6 +24,51 @@
     color: #fff;
     padding: .5rem 1.5rem;
     border-radius: 10px;
+    letter-spacing: 2px;
     border: none;
-    background-color: blue;
+    background-color: #0085ff;
+}
+
+.pointer{
+    cursor: pointer;
+}
+
+.button{
+    padding: 1rem 1.5rem;
+    margin: .5rem;
+    border-radius: 10px;
+    border: 1px solid black;
+    font-weight: bold;
+}
+
+.modal-container{
+    max-width: 250px;
+    padding: 1rem;
+    margin: auto;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.message{
+    padding: 1rem;
+}
+
+.btns{
+    display: flex;
+    justify-content: center;
+}
+
+.btn-yes{
+    background-color: #0085ff;
+    color: #fff;
+    border: #0085ff;
+}
+
+.btn-no{
+    color: #0085ff;
+    border: 1px solid #0085ff;
+}
+
+.hidden {
+    display: none;
 }

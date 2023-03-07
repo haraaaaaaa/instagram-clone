@@ -8,7 +8,7 @@
     <form class="form">
       <div class="row row-1"> 
         <h1>Create</h1>
-        <button class="btn-share">Share</button>
+        <button id="share" class="btn-share pointer">Share</button>
       </div>
       
       <div class="row row-2">
@@ -23,6 +23,18 @@
       </div>  
     </form>
     
+    <div id="modal" class="modal-container">
+      
+        <p class="message">Are you shure you want to share this post?</p>
+        <div class="btns">
+        <button id="yes-btn" class="button btn-yes pointer">Yes</button>
+        <button id="no-btn" class="button btn-no pointer">No</button>
+        </div>  
+      
+    </div>
+     
+  
+
     <%- include("includes/navbar.ejs") %>
   </body>
 </html>
