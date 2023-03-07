@@ -34,9 +34,9 @@ app.post("/post", (request, response) => {
   const { title, imgUrl, caption } = request.body;
   console.log(title, imgUrl, caption);
 
-  /*  if (caption.length > 3) {
-    return response.render("error400");
-  } */
+    if (caption.length > 3) {
+      return response.render("error400");
+    } 
 
   fs.readFile(postsDataPath, (err, posts) => {
     const updatedPosts = [{ title, imgUrl, caption }, ...JSON.parse(posts)];
