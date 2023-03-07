@@ -2,13 +2,12 @@
 const express = require("express");
 const path = require("path");
 const fs = require("fs");
-const createHttpError = require("http-errors");
 
 // express setup
 const app = express();
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static("public"));
-app.listen(5000);
+app.listen(5000, () => console.log("Server is running."));
 
 // ejs setup
 app.set("view engine", "ejs");
@@ -35,13 +34,13 @@ app.post("/post", (request, response) => {
   const { title, imgUrl, caption } = request.body;
   console.log(title, imgUrl, caption);
 
-  /*if (caption.length > 3) {
+  /*  if (caption.length > 3) {
     return response.render("error400");
-  }*/
+  } */
 
   fs.readFile(postsDataPath, (err, posts) => {
-    const newPosts = [{ title, imgUrl, caption }, ...JSON.parse(posts)];
-    fs.writeFile(postsDataPath, JSON.stringify(newPosts), () => {
+    const updatedPosts = [{ title, imgUrl, caption }, ...JSON.parse(posts)];
+    fs.writeFile(postsDataPath, JSON.stringify(updatedPosts), () => {
       response.redirect("/");
     });
   });
