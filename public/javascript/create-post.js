@@ -24,9 +24,9 @@ btnShare.addEventListener('click', (event) => {
   modal.classList.remove('hidden');
 });
 
-yesBtn.addEventListener('click', () => {
+/*yesBtn.addEventListener('click', () => {
   modal.classList.add('hidden');
-});
+});*/
 
 noBtn.addEventListener('click', () => {
   modal.classList.add('hidden');
