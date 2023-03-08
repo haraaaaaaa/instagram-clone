@@ -32,11 +32,16 @@ app.get("/post", (request, response) => {
 
 app.post("/post", (request, response) => {
   const { title, imgUrl, caption } = request.body;
-  console.log(title, imgUrl, caption);
 
-    if (caption.length > 3) {
-      return response.render("error400");
-    } 
+  if (caption.length > 150) {
+    return response.render("error400", {
+      message: "Maximum number of characters a caption can have is 150.",
+    });
+  } else if (title.length === 0 || caption.length === 0) {
+    return response.render("error400", {
+      message: "Title or caption must have atleast 1 character.",
+    });
+  }
 
   fs.readFile(postsDataPath, (err, posts) => {
     const updatedPosts = [{ title, imgUrl, caption }, ...JSON.parse(posts)];
