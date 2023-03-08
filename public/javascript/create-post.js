@@ -24,6 +24,7 @@ btnShare.addEventListener('click', (event) => {
   modal.classList.remove('hidden');
 });
 
-noBtn.addEventListener('click', () => {
-  location.reload();
+noBtn.addEventListener("click", (event) => {
+  event.preventDefault();
+  return location.reload();
 });
