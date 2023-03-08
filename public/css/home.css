@@ -1,9 +1,13 @@
 *{
-    max-width: 385px;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
+    max-width: 385px;   
+}
+
+body{
+    padding-top: 4rem;
+    padding-bottom: 5rem;
 }
 
 li{
@@ -22,9 +26,8 @@ li{
     align-items: center;
     justify-content: space-between;
     padding: 1rem;
+    background-color: #fff;
     border-bottom: 1px solid black;
-    z-index: 99;
-    background-color: cornflowerblue;
 }
 
 .bottom-nav{
@@ -32,8 +35,8 @@ li{
     bottom: 0;
     width: 100%;
     padding-top: 1rem;
-    z-index: 99;
-    background-color: blueviolet;
+    background-color: #fff;
+    border-top: 1px solid black;
 }
 
 .bottom-nav ul{
@@ -46,13 +49,7 @@ li{
 .img{
     width: 22px;
 }
-
-.posts{
-    height: 100%;
-    padding-top: 4rem;
-    padding-bottom: 5rem;
-    background-color: darkcyan;
-}
+  
 
 .profile{
     display: flex;
@@ -65,12 +62,7 @@ li{
     width: 2rem;
 }
 
-.post-img{
-    height: 350px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom;
-}
+
 
 .post-options {
     display: flex;
@@ -88,4 +80,8 @@ li{
 
 p{
     padding-top: .25rem;
+}
+
+.grey{
+    color: #c4bfbf;
 }
