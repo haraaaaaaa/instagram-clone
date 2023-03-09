@@ -1,5 +1,5 @@
 *{
-    max-width: 385px;
+    max-width: 414px;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -55,8 +55,9 @@ input{
 }
 
 .modal-container{
-    max-width: 250px;
+    max-width: 300px;
     padding: 1rem;
+    background-color: #fff;
     margin: auto;
     border: 1px solid black;
     border-radius: 10px;

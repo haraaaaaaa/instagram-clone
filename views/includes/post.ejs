@@ -39,7 +39,16 @@
               <div class="comments">
                   <p><b>You</b> <%= post.caption %></p>
                   <p class="grey">View all 54 comments</p>
-                  <p class="grey">Just now</p>
+                  <p class="grey">
+                    <div id="current_date"></p>
+                      <script>
+                        date = new Date();
+                        year = date.getFullYear();
+                        month = date.getMonth() + 1;
+                        day = date.getDate();
+                        document.getElementById("current_date").innerHTML = day + "/" + month + "/" + year;
+                      </script>
+                  </p>
               </div>
           </div>
   </div>

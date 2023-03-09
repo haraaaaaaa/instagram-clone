@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="css/home.css">
 <link rel="stylesheet" href="css/create-post.css">
 <script src="/javascript/create-post.js" defer></script>
-  </head>
+  </head> 
   <body>
     
     <form action="/post" method="post" class="form">
@@ -21,18 +21,17 @@
         <label for="text">Write a Caption</label>
         <input type="text" name="caption">
       </div>
+    
+    <div id="modal" class="modal-container">
       
-        <div id="modal" class="modal-container">
-      
-          <p class="message">Are you sure you want to share this post?</p>
-          <div class="btns">
-          <button type="submit" id="yes-btn" class="button btn-yes pointer">Yes</button>
-          <button id="no-btn" class="button btn-no pointer">No</button>
+        <p class="message">Are you sure you want to share this post?</p>
+        <div class="btns">
+        <button type="submit" id="yes-btn" class="button btn-yes pointer">Yes</button>
+        <button id="no-btn" class="button btn-no pointer">No</button>
         </div>  
       
     </div>
-
-    </form>
+  </form>
 
     <%- include("includes/navbar.ejs") %>
   </body>
