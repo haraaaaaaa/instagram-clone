@@ -2,12 +2,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    max-width: 385px;   
+    max-width: 385px;  
 }
 
 body{
     padding-top: 4rem;
     padding-bottom: 5rem;
+    
 }
 
 li{

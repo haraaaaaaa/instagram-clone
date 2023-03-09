@@ -7,3 +7,5 @@ const gotoCreatePost = async (event) => {
 };
 
 createPost.addEventListener("click", gotoCreatePost);
+
+// Change Heart Color
