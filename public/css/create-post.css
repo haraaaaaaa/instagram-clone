@@ -79,6 +79,7 @@ input{
 }
 
 .btn-no{
+    background-color: #fff;
     color: #0085ff;
     border: 1px solid #0085ff;
 }
