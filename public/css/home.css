@@ -52,6 +52,16 @@ li{
     width: 22px;
 }
   
+.post-img{
+    max-width: 414px;
+    max-height: 314px;
+}
+
+.post-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
 
 .profile{
     display: flex;
@@ -63,8 +73,6 @@ li{
 .img-pro{
     width: 2rem;
 }
-
-
 
 .post-options {
     display: flex;
@@ -87,3 +95,4 @@ p{
 .grey{
     color: #c4bfbf;
 }
+

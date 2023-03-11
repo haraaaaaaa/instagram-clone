@@ -10,8 +10,9 @@
       <div class="post-img">
         <img src= <%= post.imgUrl %> >
       </div>
-          <div class="alignment">
-            <ul class="post-options">
+
+      <div class="alignment">
+          <ul class="post-options">
               <li>
                   <svg class="heart pointer" aria-label="Activity Feed" class="_8-yf5 " color="#262626" fill="#262626" height="22"
                       role="img" viewBox="0 0 48 48" width="22">
@@ -31,25 +32,26 @@
                 </path>
               </svg>
               </li>
-            </ul>
+          </ul>
           <div class="profiles-liked">
               <div class="profile-pictures"></div>
-                  <p>Liked by <b>emin_vga</b> and <b>582 others</b></p>
-              </div>
-              <div class="comments">
-                  <p><b>You</b> <%= post.caption %></p>
-                  <p class="grey">View all 54 comments</p>
-                  <p class="grey">
-                    <div id="current_date"></p>
-                      <script>
-                        date = new Date();
-                        year = date.getFullYear();
-                        month = date.getMonth() + 1;
-                        day = date.getDate();
-                        document.getElementById("current_date").innerHTML = day + "/" + month + "/" + year;
-                      </script>
-                  </p>
-              </div>
+              <p>Liked by <b>emin_vga</b> and <b>582 others</b></p>
           </div>
+            <div class="comments">
+              <p><b>You</b> <%= post.caption %></p>
+              <p class="grey">View all 54 comments</p>
+              <p class="grey">
+              <div id="current_date">
+                <script>
+                  date = new Date();
+                  year = date.getFullYear();
+                  month = date.getMonth() + 1;
+                  day = date.getDate();
+                  document.getElementById("current_date").innerHTML = day + "/" + month + "/" + year;
+                </script>
+              </p>
+            </div>
+      </div>
+
   </div>
 </li>
